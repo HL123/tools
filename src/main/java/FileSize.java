@@ -35,13 +35,11 @@ public class FileSize {
 
             if(array[i].isFile()){
                 result = "File name: " + array[i].getName() + "  size:" + size2Show;
-                list.add(result);
-
             }else if(array[i].isDirectory()){
                 result = "Directory name: " + array[i].getName() + "  size:" + size2Show;
-                list.add(result);
             }
 
+            list.add(result);
             System.out.println(result);
             FileUtils.writeLines(new File("/Users/huanglei/Desktop/filelist.txt"), list, "\n", false);
         }
